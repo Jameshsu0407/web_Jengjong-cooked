@@ -1,4 +1,113 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+/* 導覽列 */
+nav{
+    padding: 30px;
+    /* 顯示：靈活 */
+    display: flex;
+    /* 均勻排列每個子元素 首個放起點 最後放終點 */
+    justify-content: space-between;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    /* 固定著 */
+    position: sticky;
+    /* 固定在最上方 */
+    top: 0;
+    height: 100px;
+    background-color: rgba(255,255,255,0.9);
+    /* 深度 數字越大距離使用者越近 */
+    z-index: 1;
+}
+
+nav ol li{
+    display: inline-block;
+    padding: 0 20px;
+}
+nav ol li a{
+    color: black;
+    /* 去除自底下超連結的橫條 */
+    text-decoration: none;
+    line-height: 46px;
+    font-size: 16px;
+}
+/* hover指到 */
+nav ol li a:hover{
+    color: #9f0403;
+}
+
+#logo img{
+    width: 30px;
+    vertical-align: middle;
+    background-color: #9f0403;
+    border-radius: 50%;
+}
+
+#logo{
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+/* 橫幅 banner */
+#banner{
+    /* 100%螢幕高度 */
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    /* 讓圖片填滿視窗 不要重複 */
+    background-size: cover;
+    /* banner撐到導覽列 */
+    margin-top: -100px;
+    transform: scale(1);
+    transition: 3s;
+}
+
+#banner:hover{
+    transform: scale(1.15);
+}
+
+#banner-box{
+    overflow: hidden;
+}
+
+/* 內容 */
+.content{
+    width: 900px;
+    padding: 30px 10px;
+    margin: 0 auto;
+}
+
+.content h1{
+    text-align: center;
+    margin: 10px;
+    color: #9f0403;
+}
+
+.content p{
+    padding: 20px 0;
+    line-height: 2;
+}
+
+.content ul li{
+    padding: 10px 0;
+} 
+
+.red-box{
+    background-color: #9f0403;
+    color: white;
+}
+
+.red-box h1{
+    color: white;
+}
+ /* 頁尾 */
+ footer{
+     height: 60px;
+     /* 文字只有一行可以設定垂直置中 */
+     line-height: 60px;
+     background-color: #9f0403;
+     color: white;
+     text-align: center;
+ }
