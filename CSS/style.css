@@ -40,7 +40,7 @@ nav ol li a:hover{
 
 #logo img{
     width: 30px;
-    vertical-align: middle;
+    vertical-align: -5px;
     background-color: #9f0403;
     border-radius: 50%;
 }
